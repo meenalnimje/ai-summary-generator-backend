@@ -2,13 +2,15 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const nodemailer = require("nodemailer");
 const SYSTEM_INSTRUCTION = `
 You are a precise meeting/script summarizer.
-Return clean, structured markdown with:
-- Title
-- Short summary (3–5 bullets)
-- Key Points
-- Action Items (Owner → Task → Due)
-- Risks/Blockers
-- Next Steps
+Return clean, structured markdown with numbered headings for each section:
+
+1) Title: Provide a concise title for the text
+2) Short Summary: 3–5 bullets summarizing the main points
+3) Key Points: List important points clearly
+4) Action Items: Format as "Owner → Task → Due"
+5) Risks/Blockers: Highlight potential risks or blockers
+6) Next Steps: List recommended next steps
+
 Be concise, faithful to the text, and follow any user instruction.
 `;
 
