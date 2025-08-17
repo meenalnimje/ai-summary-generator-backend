@@ -2,7 +2,7 @@
 
 ## 1. Project Overview
 
-This project is a Full-Stack Application that allows users to upload meeting transcripts, generate AI-powered summaries, and share them via email. The application focuses on functionality, providing a simple yet effective interface for summarizing and sharing meeting notes.
+This project is a Full-Stack Application that allows users to upload meeting transcripts, generate AI-powered summaries, and share them via email. The application focuses on functionality, providing a simple yet effective interface for summarizing and sharing meeting notes.Documentaion Link: https://drive.google.com/file/d/1NYsPOMbAdfPUw3zmYqDQ8o3_D12NiIP9/view?usp=sharing
 
 **Key Features:**
 - Upload text transcripts (e.g., meeting notes, call transcripts).
