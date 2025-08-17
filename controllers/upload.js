@@ -62,7 +62,7 @@ exports.sendEmail = async (req, res) => {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: email,
-      subject: "Summary from Your App",
+      subject: "Summary from the shared transcript",
       text: summary,
     };
 
