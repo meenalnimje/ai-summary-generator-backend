@@ -4,7 +4,7 @@ const SYSTEM_INSTRUCTION = `
 You are a precise meeting/script summarizer.
 Return clean, structured markdown with:
 - Title
-- TL;DR (3–5 bullets)
+- Short summary (3–5 bullets)
 - Key Points
 - Action Items (Owner → Task → Due)
 - Risks/Blockers
@@ -43,10 +43,12 @@ exports.summarize = async (req, res) => {
 
 exports.sendEmail = async (req, res) => {
   try {
-    const { email, summary } = req.body;
+    const { email, summary, subject } = req.body;
 
-    if (!email || !summary) {
-      return res.status(400).json({ error: "Email and summary are required" });
+    if (!email || !summary || !subject) {
+      return res
+        .status(400)
+        .json({ error: "Email / Summary /Subject are required " });
     }
 
     const transporter = nodemailer.createTransport({
@@ -62,7 +64,7 @@ exports.sendEmail = async (req, res) => {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: email,
-      subject: "Summary from the shared transcript",
+      subject: subject,
       text: summary,
     };
 

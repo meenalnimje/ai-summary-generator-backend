@@ -10,7 +10,6 @@ app.use(
     origin: `${process.env.ORIGIN}`,
   })
 );
-
 app.use("/api", apiroute);
 app.listen(8000, (req, res) => {
   console.log("server start at post 8000");
